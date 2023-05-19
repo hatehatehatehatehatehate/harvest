@@ -1,0 +1,309 @@
+@font-face {
+    font-family: "Genshin";
+    src: url("../font.ttf") format("truetype");
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    --page-max-weight: 1000px;
+    background: #eee;
+    font-family: "Genshin", sans-serif;
+}
+
+h1 {
+    color: #000;
+}
+
+h2 {
+    color: #222;
+}
+
+h3 {
+    color: #444;
+}
+
+p, summary {
+    color: #666;
+}
+
+.header {
+    overflow: hidden;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.header-wrap {
+    max-width: var(--page-max-weight);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.header a {
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    transition: background-color .3s ease-out;
+}
+
+.header a:not(.logo):not(.active):hover, .footer a:hover {
+    background-color: #0002;
+    color: black;
+}
+
+.header .logo {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0;
+}
+
+.logo img {
+    vertical-align: middle;
+    padding: 5px;
+}
+
+.header-right {
+    margin-left: auto;
+}
+
+a {
+    color: #7391ff;
+}
+
+.cards {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+    padding: 1rem;
+}
+
+.request p {
+    padding-bottom: 1rem;
+}
+
+.request .img {
+    background-color: black;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    height: 400px;
+    margin: 1rem 0;
+}
+
+.request .img .img-before,
+.request .img .img-after {
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.5s ease-out;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.request .img:hover .img-after {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.request details p {
+    padding: 0 1rem;
+}
+
+.note {
+    background-color: #cfcfcf;
+    border-left-color: #111;
+}
+
+.note-danger {
+    background-color: #ffdddd;
+    border-left-color: #f44336;
+}
+
+.note-good {
+    background-color: #dfd;
+    border-left-color: #4caf50;
+}
+
+.note-info {
+    background-color: #e7f3fe;
+    border-left-color: #2196F3;
+}
+
+.note-warn {
+    background-color: #fff59d;
+    border-left-color: #ffc107;
+}
+
+h1, h2, .request-info {
+    text-align: center;
+}
+
+form ul {
+    list-style: none;
+}
+
+input:not([type="submit"]), select[name] {
+    border: 2px solid #ccc;
+    background: transparent;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}
+
+textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100px;
+    max-height: 100vh;
+}
+
+.add-comment textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 20px;
+    max-height: 50vh;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr:hover {
+    background: #0002;
+}
+
+td, th {
+    border: 1px solid black;
+}
+
+table button {
+    width: 100%;
+}
+
+.request-info .mod-status {
+    border: 1px solid #0005;
+    border-radius: 8px;
+    padding: 0.2rem 0.5rem;
+    background: #0001;
+}
+
+input,
+.btn,
+select {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    margin: 5px 0;
+    opacity: 0.85;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+input:hover,
+.btn:hover {
+    opacity: 1;
+}
+
+input[type=submit] {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    padding: 0.8rem 3rem;
+    min-width: 15rem;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+input[type=submit].button-negative {
+    background-color: #af4c4c;
+}
+
+input[type=submit].button-negative:hover {
+    background-color: #a04545;
+}
+
+details {
+    border: 2px solid #aaa;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+summary {
+    padding: 0.8rem 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+details[open] summary {
+    border-bottom: 2px solid #aaa;
+}
+
+details form {
+    padding: 0 1rem;
+}
+
+.request details .new-comment {
+    background: #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+.request details .new-comment span {
+    color: #666;
+}
+
+@media screen and (max-width: 600px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .header-right {
+        float: none;
+    }
+
+    .cards {
+        padding: 0;
+    }
+
+    .card {
+        border-radius: 0;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+    }
+}

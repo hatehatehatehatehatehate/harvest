@@ -1,0 +1,24 @@
+.card-counter {
+    text-align: center;
+}
+
+#fixed-count {
+    font-size: xxx-large;
+}
+
+.counter-update {
+    animation-name: counter-update-ani;
+    animation-direction: alternate;
+    animation-duration: 1s;
+}
+
+@keyframes counter-update-ani {
+    50% {
+        color: transparent;
+        transform: scale(1.02);
+    }
+    to {
+        color: #7391ff;
+        transform: scale(1);
+    }
+}
